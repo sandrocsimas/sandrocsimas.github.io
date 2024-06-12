@@ -1,4 +1,4 @@
-// import Image from "next/image";
+import { Menu } from "./Menu";
 
 interface State {
   id: number;
@@ -12,12 +12,15 @@ interface PageProps {
 
 export default function Page({ states }: PageProps) {
   return (
-    <div>
-      {states.map((state) => (
-        <div key={state.id}>
-          {state.name} ({state.abbr})
-        </div>
-      ))}
+    <div className="flex flex-col gap-4">
+      <Menu />
+      <div>
+        {states.map((state) => (
+          <div key={state.id}>
+            {state.name} ({state.abbr})
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
