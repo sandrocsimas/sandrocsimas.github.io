@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function Menu() {
+export default function Menu() {
   const [isActive, setIsActive] = useState(false);
 
   const handleMenuClick = () => {

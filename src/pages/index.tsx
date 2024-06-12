@@ -1,4 +1,4 @@
-import { Menu } from "./Menu";
+import Menu from "./components/Menu";
 
 interface State {
   id: number;
