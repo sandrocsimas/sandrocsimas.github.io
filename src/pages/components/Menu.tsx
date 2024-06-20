@@ -1,4 +1,6 @@
-import { useState } from "react";
+"use client";
+
+import { useEffect, useState } from "react";
 
 export default function Menu() {
   const [isActive, setIsActive] = useState(false);
@@ -6,6 +8,10 @@ export default function Menu() {
   const handleMenuClick = () => {
     setIsActive(!isActive);
   };
+
+  useEffect(() => {
+    setIsActive(true);
+  }, []);
 
   return (
     <div>
