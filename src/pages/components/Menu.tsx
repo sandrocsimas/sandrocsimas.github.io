@@ -3,7 +3,9 @@
 import { useEffect, useState } from "react";
 
 export default function Menu() {
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(
+    typeof window === "undefined" ? false : true
+  );
 
   const handleMenuClick = () => {
     setIsActive(!isActive);
